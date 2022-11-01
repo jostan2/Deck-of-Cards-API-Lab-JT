@@ -1,0 +1,14 @@
+﻿@model DrawCard
+
+<h2>Drawn Cards:</h2>
+
+@foreach(Card c in Model.cards) //for every Card in the Card[] array, display the following properties.
+{
+    <p>Code: @c.code</p>
+    <p>Value: @c.value</p>
+    <p>Suit: @c.suit</p>
+
+    <img src="@c.image"/>
+    <br />
+    <p>-----------------------------------------</p>
+}
