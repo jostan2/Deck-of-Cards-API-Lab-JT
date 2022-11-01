@@ -1,4 +1,5 @@
 ﻿using Deck_of_Cards_API_Lab_JT.Models;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -25,6 +26,12 @@ namespace Deck_of_Cards_API_Lab_JT.Controllers
         {
             return View();
         }
+
+/*        public IActionResult DrawNum5() //input box for user input
+        {
+            DrawCard dc = api.DrawCard5();
+            return View(dc);
+        }*/
 
         public IActionResult HandResult(int key) //display amount of cards the user defined
         {
