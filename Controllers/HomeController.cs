@@ -17,16 +17,16 @@ namespace Deck_of_Cards_API_Lab_JT.Controllers
 
         public IActionResult Index()
         {
-            CreateDeck d = api.NewDeck();
+            CreateDeck d = api.NewDeck(); //display the newly created deck's Id
             return View(d);
         }
 
-        public IActionResult DrawNum() //input box for user
+        public IActionResult DrawNum() //input box for user input
         {
             return View();
         }
 
-        public IActionResult HandResult(int key) //display amount of cards user defined
+        public IActionResult HandResult(int key) //display amount of cards the user defined
         {
             DrawCard dc = api.DrawCard(key);
             return View(dc);
