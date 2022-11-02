@@ -31,16 +31,16 @@ namespace Deck_of_Cards_API_Lab_JT.Models
             return dc;
         }
 
-/*        public DrawCard DrawCard5() //draw the 5 of cards.
+        public DrawCard CardWar() //draw the 2 of cards.
         {
-            string url = $"https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=5";
+            string url = $"https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=2";
 
             RestClient client = new RestClient(url);
             RestRequest request = new RestRequest();
             var response = client.GetAsync<DrawCard>(request);
             DrawCard dc = response.Result;
             return dc;
-        }*/
+        }
 
     }
 }

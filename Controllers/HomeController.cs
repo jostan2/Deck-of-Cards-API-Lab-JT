@@ -27,15 +27,20 @@ namespace Deck_of_Cards_API_Lab_JT.Controllers
             return View();
         }
 
-/*        public IActionResult DrawNum5() //input box for user input
-        {
-            DrawCard dc = api.DrawCard5();
-            return View(dc);
-        }*/
-
         public IActionResult HandResult(int key) //display amount of cards the user defined
         {
             DrawCard dc = api.DrawCard(key);
+            return View(dc);
+        }
+
+        public IActionResult CardGame()
+        {
+            return View();
+        }
+
+        public IActionResult CardGameResult() //display amount of cards the user defined
+        {
+            DrawCard dc = api.CardWar();
             return View(dc);
         }
 

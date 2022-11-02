@@ -1,0 +1,23 @@
+﻿@model DrawCard
+
+<h2>Drawn Cards:</h2>
+<br />
+
+@{int index = 1;}
+@foreach (Card c in Model.cards) //for every Card in the Card[] array, display the following properties.
+{
+    <h4><b>Player @index</b></h4>
+        index++;
+    <p>Code: @c.code</p>
+    <p>Value: @c.value</p>
+    <p>Suit: @c.suit</p>
+
+    <img src="@c.image" />
+    <br />
+    <p>-----------------------------------------</p>
+
+}
+
+@*@if Card*@
+
+<p><a href="https://localhost:7090/Home/CardGame">Play Again</a>
